@@ -21,6 +21,16 @@ const ProductDetail = () => {
     setToggleState(index);
   };
 
+
+    
+
+
+
+
+
+
+
+
   const [urlPopupImg, setUrlPopupImg] = useState('')
   const [isPopup, setIsPopup] = useState(false)
   const popupImg = (url) => {
