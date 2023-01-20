@@ -21,20 +21,10 @@ const ProductDetail = () => {
     setToggleState(index);
   };
 
-
-    
-
-
-
-
-
-
-
-
-  const [urlPopupImg, setUrlPopupImg] = useState('')
-  const [isPopup, setIsPopup] = useState(false)
+  const [urlPopupImg, setUrlPopupImg] = useState("");
+  const [isPopup, setIsPopup] = useState(false);
   const popupImg = (url) => {
-    setIsPopup(prev => !prev)
+    setIsPopup((prev) => !prev);
     setUrlPopupImg(url);
   };
 
@@ -57,8 +47,8 @@ const ProductDetail = () => {
           <div className="flex flex-col gap-[50px] sm:flex-row sm:mb-[50px] items-center">
             <div className="productSlider h-[100%]  w-[100%] sm:w-[50%] h-[auto] text-[#fff] ">
               <Slider {...settings}>
-                {urlImages.map((url) => (
-                  <div>
+                {urlImages.map((url, i) => (
+                  <div key={i}>
                     <img
                       onClick={() => popupImg(url)}
                       src={url}
