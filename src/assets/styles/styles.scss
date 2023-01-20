@@ -477,9 +477,14 @@
       width: 80%;
       height: auto;
       img {
-        object-fit:cover;
+        transition:all .3s;
+        opacity: 0;
+        object-fit: cover;
         width: 100%;
         height: 80vh;
+        &.imgActive{
+          opacity: 1;
+        }
       }
     }
     .closeBtn {
@@ -489,12 +494,19 @@
     }
   }
 
-  @keyframes scaleImg {
-    5% {
-      scale: 0.4;
-    }
-    100% {
-      scale: 1;
-    }
-  }
+  // @keyframes scaleImg {
+  //   5% {
+  //     opacity: 0;
+  //     scale: 0.4;
+      
+  //   }
+  //   30% {
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     scale: 1;
+  //     opacity: 1;
+      
+  //   }
+  // }
 }

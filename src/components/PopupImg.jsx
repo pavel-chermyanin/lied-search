@@ -1,7 +1,14 @@
+import { useEffect, useState } from "react";
+
 const PopupImg = ({ url, setIsPopup }) => {
+  const [classActive, setiClassActive] = useState("");
   const closePopup = () => {
     setIsPopup(false);
   };
+
+  useEffect(() => {
+    setiClassActive("imgActive");
+  },[])
   return (
     <div
       onClick={closePopup}
@@ -12,6 +19,7 @@ const PopupImg = ({ url, setIsPopup }) => {
         <img
           src={url}
           alt=""
+          className={classActive}
         />
       </div>
     </div>
